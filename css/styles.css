@@ -6,7 +6,7 @@
   --primary-background-color: #f5f5f5;
   --secondary-background-color: #f5f4fa;
   --hero-background-color: #2f303a;
-  --clients-icon-color: #AFB1B8;
+  --clients-icon-color: #afb1b8;
 }
 /* колір основного тексту  #757575 */
 /* другорядний колір тексту #212121  */
@@ -115,20 +115,18 @@ img {
   gap: 50px;
 }
 .contacts-item {
-
 }
 .contacts-item-link {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 .contacts-item-icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
 }
 .contacts-item-link:hover .contacts-item-icon {
-fill: var(--accent-color);
+  fill: var(--accent-color);
 }
 .contacts-item-link:focus .contacts-item-icon {
   fill: var(--accent-color);
@@ -175,9 +173,12 @@ fill: var(--accent-color);
   margin: auto;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image:
-  linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  url(../images/Hero.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Hero.jpg);
 }
 .hero-title {
   color: var(--white-color);
@@ -216,7 +217,6 @@ fill: var(--accent-color);
 /* -------------FEATURES-------------- */
 .features-card {
   width: 270px;
-
 }
 
 .features.list {
@@ -240,16 +240,16 @@ fill: var(--accent-color);
 }
 
 .icon-antenna::before {
-background-image: url(../images/antenna.svg);
+  background-image: url(../images/antenna.svg);
 }
 .icon-clock::before {
-background-image: url(../images/clock.svg);
+  background-image: url(../images/clock.svg);
 }
 .icon-diagrama::before {
-background-image: url(../images/diagram.svg);
+  background-image: url(../images/diagram.svg);
 }
 .icon-astronaut::before {
-background-image: url(../images/astronaut.svg);
+  background-image: url(../images/astronaut.svg);
 }
 
 .features .feauture-title {
@@ -360,7 +360,7 @@ background-image: url(../images/astronaut.svg);
   height: 44px;
 }
 .team-soc-icon {
-  fill: #AFB1B8;
+  fill: #afb1b8;
 }
 
 .team-soc-link {
@@ -374,13 +374,13 @@ background-image: url(../images/astronaut.svg);
 
 .team-soc-link:hover,
 .team-soc-link:focus {
-background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 .team-soc-link:hover .team-soc-icon {
-fill: var(--white-color);
+  fill: var(--white-color);
 }
 .team-soc-link:focus .team-soc-icon {
-fill: var(--white-color);
+  fill: var(--white-color);
 }
 
 /* ------------------CLIENTS ----------------*/
@@ -410,14 +410,12 @@ fill: var(--white-color);
 }
 
 .clients-icon {
-fill: var(--clients-icon-color)
+  fill: var(--clients-icon-color);
 }
 
 .clients-link:hover .clients-icon {
   fill: var(--accent-color);
 }
-
-
 
 /* ------------FOOTER-CONTACTS----------*/
 
@@ -456,6 +454,55 @@ fill: var(--clients-icon-color)
   color: var(--white-color);
   display: inline-block;
 }
+
+/* -------FOOTER-SOCIAL-------- */
+
+.footer-wrap > .container {
+  display: flex;
+  align-items: baseline;
+  gap: 70px;
+}
+.footer-soc-container {
+  height: 80px;
+}
+.footer-action {
+  margin-bottom: 20px;
+}
+
+.footer-action-text {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+}
+.footer-soc-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc-icon {
+  fill: var(--white-color);
+}
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
+}
+
 /* ----------PORTFOLIO-FILTER------------ */
 
 .list .filter-button {
@@ -478,11 +525,24 @@ fill: var(--clients-icon-color)
 .list .filter-button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* ---------PORTFOLIO-PROJECTS------------ */
 
 .project-card {
   border: 1px solid #eeeeee;
+}
+
+.project {
+  display: block;
+  text-decoration: none;
+}
+
+.project:hover,
+.project:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-card-text {
@@ -500,6 +560,7 @@ fill: var(--clients-icon-color)
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 
 .project-image {
