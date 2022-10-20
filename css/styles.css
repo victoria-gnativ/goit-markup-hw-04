@@ -6,6 +6,7 @@
   --primary-background-color: #f5f5f5;
   --secondary-background-color: #f5f4fa;
   --hero-background-color: #2f303a;
+  --clients-icon-color: #AFB1B8;
 }
 /* колір основного тексту  #757575 */
 /* другорядний колір тексту #212121  */
@@ -14,6 +15,7 @@
 /* акцент #2196F3 */
 /* головний колір фону #F5F5F5; */
 /* другорядний колір фону #F5F4FA; #2F303A */
+/* колір іконок клієнтів #AFB1B8 */
 
 /* -------GENERAL------- */
 body {
@@ -112,6 +114,25 @@ img {
   margin-left: auto;
   gap: 50px;
 }
+.contacts-item {
+
+}
+.contacts-item-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.contacts-item-icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+.contacts-item-link:hover .contacts-item-icon {
+fill: var(--accent-color);
+}
+.contacts-item-link:focus .contacts-item-icon {
+  fill: var(--accent-color);
+}
 .site-nav .link {
   font-weight: 500;
   line-height: 1.14;
@@ -147,9 +168,16 @@ img {
 
 /* -------------HERO------------- */
 .hero {
-  background-color: var(--hero-background-color);
+  height: 600px;
+  max-width: 1600px;
   text-align: center;
   padding: 200px 0;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:
+  linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url(../images/Hero.jpg);
 }
 .hero-title {
   color: var(--white-color);
@@ -188,7 +216,7 @@ img {
 /* -------------FEATURES-------------- */
 .features-card {
   width: 270px;
-  outline: 2px solid tomato;
+
 }
 
 .features.list {
@@ -200,7 +228,28 @@ img {
   width: 270px;
 }
 
-.qualities {
+.card::before {
+  content: ;
+  display: block;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--secondary-background-color);
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-antenna::before {
+background-image: url(../images/antenna.svg);
+}
+.icon-clock::before {
+background-image: url(../images/clock.svg);
+}
+.icon-diagrama::before {
+background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before {
+background-image: url(../images/astronaut.svg);
 }
 
 .features .feauture-title {
@@ -272,8 +321,6 @@ img {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-color);
 }
-.team-card-img {
-}
 
 .team-card-text {
   padding: 30px 0;
@@ -296,10 +343,81 @@ img {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-align: center;
+  margin-bottom: 16px;
 }
 .team-image {
   width: calc((100% - 90px) / 4);
 }
+
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.team-soc-item {
+  width: 44px;
+  height: 44px;
+}
+.team-soc-icon {
+  fill: #AFB1B8;
+}
+
+.team-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+background-color: var(--accent-color);
+}
+.team-soc-link:hover .team-soc-icon {
+fill: var(--white-color);
+}
+.team-soc-link:focus .team-soc-icon {
+fill: var(--white-color);
+}
+
+/* ------------------CLIENTS ----------------*/
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients-item {
+  width: calc((100% - 150px) / 6);
+  height: 90px;
+}
+
+.clients-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--clients-icon-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+}
+
+.clients-icon {
+fill: var(--clients-icon-color)
+}
+
+.clients-link:hover .clients-icon {
+  fill: var(--accent-color);
+}
+
+
 
 /* ------------FOOTER-CONTACTS----------*/
 
