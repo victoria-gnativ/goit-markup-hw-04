@@ -148,7 +148,7 @@ img {
   color: var(--tittle-text-color);
   text-decoration: none;
 }
-.current {
+.nav-link.current {
   color: var(--accent-color);
 }
 
@@ -414,6 +414,10 @@ img {
   fill: var(--accent-color);
 }
 
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
+}
+
 /* ------------FOOTER-CONTACTS----------*/
 
 .footer {
@@ -478,8 +482,8 @@ img {
 }
 
 .footer-soc-item {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
 }
 
 .footer-soc-link {
